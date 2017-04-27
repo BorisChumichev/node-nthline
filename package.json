@@ -1,17 +1,26 @@
 {
   "name": "node-nthline",
   "version": "1.0.0",
-  "description": "",
+  "description": "read nth line without reading entire file",
   "main": "nthline.js",
+  "repository": "BorisChumichev/node-nthline",
   "scripts": {
     "test": "nyc ava"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "line",
+    "read",
+    "specific",
+    "nth",
+    "file"
+  ],
+  "license": "MIT",
   "devDependencies": {
     "ava": "0.19.1",
     "nyc": "^10.2.0",
     "ramda": "^0.23.0"
+  },
+  "engines": {
+    "node": ">= 0.11.12"
   }
 }
