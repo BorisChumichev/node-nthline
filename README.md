@@ -1,4 +1,4 @@
-# node-nthline [![Build Status](https://travis-ci.org/BorisChumichev/node-nthline.svg?branch=master)](https://travis-ci.org/BorisChumichev/node-nthline)
+# node-nthline [![Build Status](https://travis-ci.org/BorisChumichev/node-nthline.svg?branch=master)](https://travis-ci.org/BorisChumichev/node-nthline) [![Coverage Status](https://coveralls.io/repos/github/BorisChumichev/node-nthline/badge.svg)](https://coveralls.io/github/BorisChumichev/node-nthline)
 
 `nthline` reads specific line from file without buffering the entire file to memory. Under the hood it uses Node’s [readline](https://nodejs.org/api/readline.html) module.
 

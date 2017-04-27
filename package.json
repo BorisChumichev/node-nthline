@@ -1,5 +1,5 @@
 {
-  "name": "node-nthline",
+  "name": "nthline",
   "version": "1.0.0",
   "description": "read nth line without reading entire file",
   "main": "nthline.js",
