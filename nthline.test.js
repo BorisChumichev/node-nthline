@@ -17,7 +17,24 @@ test.before(partial(createMockFileWithNRows, [ ROWS_IN_A_MOCK_FILE ]))
 test.after('cleanup', unlinkMockFile)
 
 test('Reads nth line', async t => {
-  const n = 9e6
+  const n = 9e5
   t.is(await nthline(n, MOCK_FILE_PATH), n.toString())
 })
 
+test('Handles out of range error', async t => {
+  const n = 11e6
+  try {
+    await nthline(n, MOCK_FILE_PATH)
+  } catch(err) {
+    t.true(RangeError.prototype.isPrototypeOf(err))
+  }
+})
+
+test('Handles non-natural line numbers', async t => {
+  const n = -2.4
+  try {
+    await nthline(n, MOCK_FILE_PATH)
+  } catch(err) {
+    t.true(RangeError.prototype.isPrototypeOf(err))
+  }
+})
