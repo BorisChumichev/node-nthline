@@ -1,0 +1,16 @@
+{
+  "name": "node-nthline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "nthline.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ava": "0.19.1",
+    "ramda": "^0.23.0"
+  }
+}
