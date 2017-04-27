@@ -4,13 +4,14 @@
   "description": "",
   "main": "nthline.js",
   "scripts": {
-    "test": "ava"
+    "test": "nyc ava"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "ava": "0.19.1",
+    "nyc": "^10.2.0",
     "ramda": "^0.23.0"
   }
 }
