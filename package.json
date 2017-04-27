@@ -17,6 +17,7 @@
   "license": "MIT",
   "devDependencies": {
     "ava": "0.19.1",
+    "coveralls": "^2.13.0",
     "nyc": "^10.2.0",
     "ramda": "^0.23.0"
   },
