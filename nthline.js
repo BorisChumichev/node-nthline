@@ -1,6 +1,5 @@
 var readline = require('readline')
   , fs = require('fs')
-  , bb = require('bluebird')
 
 var outOfRangeError = function(filepath, n, cursor) {
   return new RangeError(
@@ -9,7 +8,7 @@ var outOfRangeError = function(filepath, n, cursor) {
 }
 
 module.exports = function (n, filepath) {
-  return new bb(function(resolve, reject) {
+  return new Promise(function(resolve, reject) {
     if (n < 0 || n % 1 !== 0)
       return reject(new RangeError(`Invalid line number`))
 
