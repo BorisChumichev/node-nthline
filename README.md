@@ -12,7 +12,7 @@ npm i -S nthline
 
 Module exposes just one function: `nthline` with signature: `(rowNumber:Number, filePath:String) → Promise`.
 
-```
+```javascript
 (async () => {
   const nthline = require('nthline')
     , filePath = '/path/to/100-million-rows-file'
@@ -24,9 +24,9 @@ Module exposes just one function: `nthline` with signature: `(rowNumber:Number, 
 
 Since it returns a promise you could rewrite previous example like that:
 
-```
+```javascript
 const nthline = require('nthline')
-    , filePath = '/path/to/100-million-rows-file'
+  , filePath = '/path/to/100-million-rows-file'
   , rowNumber = 42
 
 nthline(rowNumber, filePath)
