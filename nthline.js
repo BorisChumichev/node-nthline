@@ -19,6 +19,7 @@ module.exports = function (n, filepath) {
     rl.on('line', function(line) {
       if (cursor++ === n) {
         rl.close()
+        input.close()
         resolve(line)
       }
     })
