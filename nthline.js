@@ -1,9 +1,9 @@
 var readline = require('readline'),
   fs = require('fs')
 
-var outOfRangeError = function(filepath, n, cursor) {
+var outOfRangeError = function(filepath, n) {
   return new RangeError(
-    `Requested line ${n} but '${filepath}' has only ${cursor} lines`
+    `Line with index ${n} does not exist in '${filepath}. Note that line indexing is zero-based'`
   )
 }
 
@@ -25,8 +25,9 @@ module.exports = function(n, filepath) {
     })
 
     rl.on('error', reject)
+
     input.on('end', function() {
-      reject(outOfRangeError(filepath, n, cursor))
+      reject(outOfRangeError(filepath, n))
     })
   })
 }

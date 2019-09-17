@@ -10,26 +10,24 @@ npm i -S nthline
 
 ### Usage
 
-Module exposes just one function: `nthline` with signature: `(rowNumber:Number, filePath:String) → Promise`.
+Module exposes just one function: `nthline` with signature: `(rowIndex:Number, filePath:String) → Promise`. Row indexing is zero-based.
 
 ```javascript
-(async () => {
-  const nthline = require('nthline')
-    , filePath = '/path/to/100-million-rows-file'
-    , rowNumber = 42
+;(async () => {
+  const nthline = require('nthline'),
+    filePath = '/path/to/100-million-rows-file',
+    rowIndex = 42
 
-  console.log(await nthline(rowNumber, filePath))
+  console.log(await nthline(rowIndex, filePath))
 })()
 ```
 
 Since it returns a promise you could rewrite previous example like that:
 
 ```javascript
-const nthline = require('nthline')
-  , filePath = '/path/to/100-million-rows-file'
-  , rowNumber = 42
+const nthline = require('nthline'),
+  filePath = '/path/to/100-million-rows-file',
+  rowIndex = 42
 
-nthline(rowNumber, filePath)
-  .then(line => console.log(line))
-
+nthline(rowIndex, filePath).then(line => console.log(line))
 ```
