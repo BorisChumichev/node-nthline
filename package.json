@@ -1,6 +1,6 @@
 {
   "name": "nthline",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "read nth line without reading entire file",
   "main": "nthline.js",
   "repository": "BorisChumichev/node-nthline",
