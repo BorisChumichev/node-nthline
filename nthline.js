@@ -1,5 +1,5 @@
-var readline = require('readline')
-  , fs = require('fs')
+var readline = require('readline'),
+  fs = require('fs')
 
 var outOfRangeError = function(filepath, n, cursor) {
   return new RangeError(
@@ -7,14 +7,14 @@ var outOfRangeError = function(filepath, n, cursor) {
   )
 }
 
-module.exports = function (n, filepath) {
+module.exports = function(n, filepath) {
   return new Promise(function(resolve, reject) {
     if (n < 0 || n % 1 !== 0)
       return reject(new RangeError(`Invalid line number`))
 
-    var cursor = 0
-      , input = fs.createReadStream(filepath)
-      , rl = readline.createInterface({ input })
+    var cursor = 0,
+      input = fs.createReadStream(filepath),
+      rl = readline.createInterface({ input })
 
     rl.on('line', function(line) {
       if (cursor++ === n) {
