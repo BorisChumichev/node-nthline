@@ -10,7 +10,7 @@ npm i -S nthline
 
 ### Usage
 
-Module exposes just one function: `nthline` with signature: `(rowIndex:Number, filePath:String) → Promise`. Row indexing is zero-based.
+Module exposes just one function: `nthline` with signature: `(rowIndex:Number, filePath:String) → Promise<String>`. Row indexing is zero-based.
 
 ```javascript
 ;(async () => {
