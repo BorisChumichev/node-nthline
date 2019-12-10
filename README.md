@@ -29,5 +29,5 @@ const nthline = require('nthline'),
   filePath = '/path/to/100-million-rows-file',
   rowIndex = 42
 
-nthline(rowIndex, filePath).then(line => console.log(line))
+nthline(rowIndex, filePath).then(console.log)
 ```
