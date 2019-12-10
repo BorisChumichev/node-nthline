@@ -13,13 +13,11 @@ npm i -S nthline
 Module exposes a function with signature: `(rowIndex:Number, filePath:String) → Promise<String>`. Row indexing is zero-based.
 
 ```javascript
-;(async () => {
-  const nthline = require('nthline'),
-    filePath = '/path/to/100-million-rows-file',
-    rowIndex = 42
+const nthline = require('nthline'),
+  filePath = '/path/to/100-million-rows-file',
+  rowIndex = 42
 
-  console.log(await nthline(rowIndex, filePath))
-})()
+console.log(await nthline(rowIndex, filePath))
 ```
 
 Since it returns a promise you could rewrite previous example like that:
